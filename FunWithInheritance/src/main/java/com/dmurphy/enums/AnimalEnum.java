@@ -4,7 +4,9 @@ public enum AnimalEnum {
 	BIRD(1, 3, false, true),
 	DOG(2, 5, true, true),
 	PERSON(3, 10, true, false),
-	TIGER(4, 8, true, false);
+	TIGER(4, 8, true, false),
+	FROG(5, 2, false, true),
+	BEAR(6, 9, true, true);
 	
 	AnimalEnum(int id, int foodChainLevel, boolean eatsMeat, boolean eatsInsects) {
 		this.id = id;

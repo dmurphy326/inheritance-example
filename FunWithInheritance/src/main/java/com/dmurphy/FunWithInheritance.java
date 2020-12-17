@@ -73,13 +73,13 @@ public class FunWithInheritance {
 				b.setAlive(false);
 			} else {
 				log.info(b.getType() + " had to kill " + a.getType());
-				a.setStrength(a.getStrength() + b.getStrength());
+				b.setStrength(a.getStrength() + b.getStrength());
 				a.setAlive(false);
 			}
 		} else if(!a.isEatsMeat() && b.isEatsMeat()) {
 			if(b.getStrength() > a.getStrength()) {
 				log.info(b.getType() + " ate " + a.getType());
-				a.setStrength(b.getStrength() + a.getStrength());
+				b.setStrength(b.getStrength() + a.getStrength());
 				a.setAlive(false);
 			} else {
 				log.info(a.getType() + " had to kill " + b.getType());
@@ -91,7 +91,7 @@ public class FunWithInheritance {
 				log.info(a.getType() + " ate " + b.getType());
 				a.setStrength(a.getStrength() + b.getStrength());
 				b.setAlive(false);
-			} else {
+			} else if(a.getStrength() < b.getStrength()) {
 				log.info(b.getType() + " ate " + a.getType());
 				b.setStrength(a.getStrength() + b.getStrength());
 				a.setAlive(false);
@@ -126,7 +126,7 @@ public class FunWithInheritance {
 				log.info(b.getType() + " ate " + a.getType());
 				b.setEvation(b.getEvation() + a.getEvation());
 				a.setAlive(false);
-			} else {
+			} else if(b.getEvation() < a.getEvation()) {
 				log.info(a.getType() + " ate " + b.getType());
 				a.setEvation(b.getEvation() + a.getEvation());
 				b.setAlive(false);
