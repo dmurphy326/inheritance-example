@@ -20,10 +20,12 @@ public class Animal extends LivingBeing {
 
 	public void setStrength(int strength) {
 		log.info(getType() + "'s strength changed from " + this.strength + " to " + strength);
+		this.addToLifeLog(getType() + "'s strength changed from " + this.strength + " to " + strength);
 		this.strength = strength;
 		
 		if(this.strength < 0) {
 			log.info(getType() + " died from lack of strength");
+			this.addToLifeLog(getType() + " died from lack of strength");
 			setAlive(false);
 		}
 	}

@@ -20,6 +20,7 @@ public class Insect extends LivingBeing {
 
 	public void setEvation(int evation) {
 		log.info(getType() + "'s evation was changed from " + this.evation + " to " + evation);
+		this.addToLifeLog(getType() + "'s evation was changed from " + this.evation + " to " + evation);
 		this.evation = evation;
 	}
 

@@ -11,6 +11,7 @@ public class LivingBeing {
 		this.eatsInsects = eatsInsects;
 		this.type = type;
 		this.isAlive = true;
+		this.lifeLog = type + " was created";
 		
 		log.info(type + " was created");
 	}
@@ -19,6 +20,7 @@ public class LivingBeing {
 	private boolean eatsMeat;
 	private boolean eatsInsects;
 	private String type;
+	private String lifeLog;
 	
 	public boolean isAlive() {
 		return isAlive;
@@ -34,6 +36,12 @@ public class LivingBeing {
 	}
 	public String getType() {
 		return type;
+	}
+	public String getLifeLog() {
+		return lifeLog;
+	}
+	public void addToLifeLog(String lifeLog) {
+		this.lifeLog = this.lifeLog + " ===> " + lifeLog;
 	}
 	
 	@Override
